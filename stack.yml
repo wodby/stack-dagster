@@ -1,0 +1,8 @@
+name: dagster
+title: Dagster
+icon: dagster
+
+services:
+- name: dagster
+  title: Dagster
+  service: dagster
