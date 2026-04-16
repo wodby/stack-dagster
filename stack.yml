@@ -3,6 +3,13 @@ title: Dagster
 icon: dagster
 
 services:
-- name: dagster
-  title: Dagster
-  service: dagster
+  - name: dagster
+    title: Dagster
+    service: dagster
+    links:
+    - name: postgres
+      service: postgres
+
+  - name: postgres
+    title: PostgreSQL
+    service: postgres
