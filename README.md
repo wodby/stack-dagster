@@ -23,8 +23,8 @@ composition for Dagster.
 
 | Component / service | Default configuration |
 | --- | --- |
-| Dagster<br>`dagster` | optional; enabled by default; links: `postgres` → `postgres` |
-| PostgreSQL<br>`postgres` | optional; enabled by default |
+| Dagster<br>`dagster` | required; enabled by default; links: `postgres` → `postgres` |
+| PostgreSQL<br>`postgres` | required; enabled by default |
 
 Enabled optional services are selected by default but can be excluded when an
 app is created. Disabled optional services are available but not selected by

@@ -6,6 +6,7 @@ services:
   - name: dagster
     title: Dagster
     service: dagster
+    required: true
     links:
     - name: postgres
       service: postgres
@@ -13,3 +14,4 @@ services:
   - name: postgres
     title: PostgreSQL
     service: postgres
+    required: true
