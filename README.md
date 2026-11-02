@@ -11,6 +11,7 @@ composition for Dagster.
 
 - [Dagster stack on Wodby](https://wodby.com/stacks/dagster)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
+- [Dagster stack guide](https://wodby.com/docs/2.0/stacks/catalog/dagster/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
 - [Stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
 
