@@ -2,6 +2,11 @@ name: dagster
 title: Dagster
 icon: dagster
 docs: https://wodby.com/docs/2.0/stacks/catalog/dagster/
+# The main stack of the Dagster variants: the catalog shows this next to the
+# link to it on the variants' pages.
+variantDescription: >-
+  Choose this when your code locations run elsewhere: it runs Dagster's
+  webserver and daemon only, and you add code locations to its workspace.
 
 services:
   - name: dagster
