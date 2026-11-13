@@ -1,0 +1,7 @@
+# Dagster loads the code location from the stack's code server: the stack
+# service named "code", reached by that name inside the app.
+load_from:
+- grpc_server:
+    host: code
+    port: 4000
+    location_name: app
