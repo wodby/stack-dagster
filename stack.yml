@@ -2,16 +2,35 @@ name: dagster
 title: Dagster
 icon: dagster
 docs: https://wodby.com/docs/2.0/stacks/catalog/dagster/
-# The main stack of the Dagster variants: the catalog shows this next to the
-# link to it on the variants' pages.
-variantDescription: >-
-  Choose this when your code locations run elsewhere: it runs Dagster's
-  webserver and daemon only, and you add code locations to its workspace.
 
 services:
   - name: dagster
     title: Dagster
     service: dagster
+    required: true
+    links:
+    - name: postgres
+      service: postgres
+    # Loads the code location from the code service.
+    configs:
+    - name: workspace
+      config: configs/workspace.yaml
+    # Runs are executed inside the code server, which has the project's code
+    # and packages, instead of in Kubernetes jobs.
+    helm:
+    - name: runLauncher.type
+      value: CustomRunLauncher
+    - name: runLauncher.config.customRunLauncher.module
+      value: dagster
+    - name: runLauncher.config.customRunLauncher.class
+      value: DefaultRunLauncher
+    # The chart's schema requires the launcher's own config.
+    - name: runLauncher.config.customRunLauncher.config
+      value: {}
+
+  - name: code
+    title: Dagster code location
+    service: dagster-code
     required: true
     links:
     - name: postgres
