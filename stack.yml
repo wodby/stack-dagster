@@ -1,6 +1,7 @@
 name: dagster
 title: Dagster
 icon: dagster
+category: data
 docs: https://wodby.com/docs/2.0/stacks/catalog/dagster/
 
 services:
